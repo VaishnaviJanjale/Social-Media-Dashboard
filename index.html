@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="https://i.pravatar.cc/50" alt="Profile">
+        <h3>Vaishnavi Janjale</h3>
+      </div>
+      <nav>
+        <a href="#">Overview</a>
+        <a href="#">Posts</a>
+        <a href="#">Followers</a>
+        <a href="#">Messages</a>
+        <button id="toggle-theme"> Dark Mode</button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Welcome to Your Social Media Dashboard</h1>
+
+      <!-- Cards -->
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-user-friends"></i>
+          <h3>Followers</h3>
+          <p>1,245</p>
+          <button onclick="showDetails('followers')" class="btn">View Details</button>
+        </div>
+        <div class="card">
+          <i class="fas fa-file-alt"></i>
+          <h3>Posts</h3>
+          <p>324</p>
+          <button onclick="showDetails('posts')" class="btn">View Details</button>
+        </div>
+        <div class="card">
+          <i class="fas fa-heart"></i>
+          <h3>Likes</h3>
+          <p>4,512</p>
+          <button onclick="showDetails('likes')" class="btn">View Details</button>
+        </div>
+        <div class="card">
+          <i class="fas fa-envelope"></i>
+          <h3>Messages</h3>
+          <p>56</p>
+          <button onclick="showDetails('messages')" class="btn">View Details</button>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <canvas id="followersChart" width="400" height="200"></canvas>
+
+      <!-- Details Box -->
+      <div id="detailsBox" class="details-box" style="display: none;">
+        <h2 id="detailsTitle">Details</h2>
+        <p id="detailsContent">More info will show here...</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
